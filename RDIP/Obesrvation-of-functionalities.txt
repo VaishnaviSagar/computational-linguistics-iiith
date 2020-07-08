@@ -1,0 +1,62 @@
+--Name of the Lab:Computational-Linguistics-Labs.
+--Name of the Experiment:Forming Sentences-2.
+
+The main functionality used in this experiment is buttons.
+In the Webpage basically 6 buttons available as:
+1.Introduction
+2.Theory
+3.Objective
+4.Experiment
+5.Quizzes
+6.Procedure
+which of each buttons are redirected to its each HTML files of own functionality.Such as...,
+(a)Indroduction.html
+(b)Theory.html
+(c)Objectve.html
+(d)Experiment.html
+(e)Quizzes.html
+(f)Procedure.html
+
+=>To understand the Experiment...;
+------Click on Experiment Button
+=>On loading  into experiment tab
+A Radio Button appears as "Select Languange"
+which have dropdown options of English and Hindi.
+
+--If ENGLISH is selected..,
+"Form a selected (Declarative or Interrogative or any other type)from the given words"
+                  (select the buttons in proper order) 
+Above is added to webpage.
+
+=>Buttons of Jumping Words:(simultaneously added with above sentence in webpage);
+
+ON clicking on word buttons
+(i)Word from the current position disappers.
+(ii)After Selecting all words "Formed Sentence" text appeared.
+(iii)Each and every text box is appended to next of selected word to make sentence.
+(iv)"Reform the sentence " text box appeared after stating the result.
+
+=>ON clicking all word buttons
+(i)After all words selected "Check the correctness of sentence" is enabled.
+------If the formed sentence is correct
+                       GREEN TEXT "Correct Answer!!!" is appeared.
+------Else
+                 RED TEXT "Wrong Answer!!!" is appeared.
+When wrong answer is case then
+Automatically the correct sentence is Displayed along Toggle Button "HIDE THE CORRECT SENTENCE"
+ON CLICK("HIDE THE CORRECT SENTENCE");
+ALL THE CORRECT ANSWERS are hidden.
+--If HINDI is selected..,
+Same functionalities follows as above for English.
+
+************Required Functionalities in Experiment:************************
+1.Arrangement of Tabs
+(a) Procedure tab before Experiment tab will be helpful.
+(b)Quizzes tab at last.
+2.In Experiment Tab
+When sentence is correct, new random question must generate & Reset the functionalities to solve new Sentence in same language than repeating same question.
+
+
+
+
+
