@@ -195,4 +195,16 @@ function message(){
 				document.getElementById("description1").innerHTML = ""; 
 		document.getElementById("description2").innerHTML = "";
 	}
+	function shuffle(jumbled){
+  var jumble = jumbled.split(" ");
+  var i = jumble.length, temp, randomi;
+  while(0!==i){
+    randomi = Math.floor(Math.random()*i);
+    i -= 1;
+    temp = jumble[i];
+    jumble[i] = jumble[randomi];
+    jumble[randomi] = temp;
+  }
+  return jumble;
+}
 }
