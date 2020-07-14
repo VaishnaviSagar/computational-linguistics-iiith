@@ -150,6 +150,18 @@ function message(){
 		document.getElementById("description1").innerHTML = "(select the buttons in proper order)"
 		var english = collectionOfEnglishSentence [Math.floor(Math.random() * collectionOfEnglishSentence.length)];
 		var body = document.getElementsByTagName("p")[3];
+		var jumbled = array1[collectionOfEnglishSentence][0];
+    var j = shuffle(jumbled);
+    button_count=0;
+        word_count=0;
+    var button ="";
+    var l_button = "";
+    for(i=0;i<=j.length-1;i++){
+      val = j[i];
+      button = "  <button id='btn"+i+"' onclick='finals(this.id,this.value)' value='"+val+"'>"+val+"</button>  ";
+      l_button +=button;
+            button_count++
+           
 		separate = english.split(' ');
 		for(initial = 0; initial < separate.length; initial++)
 		{
@@ -174,6 +186,18 @@ function message(){
 		document.getElementById("description1").innerHTML = "(select the buttons in proper order)"
 		var hindi = collectionOfHindiSentenceSentence [Math.floor(Math.random() * collectionOfHindiSentence.length)];
 		var body = document.getElementsByTagName("p")[3];
+        var jumbled = array2[collectionOfHindiSentence][0];
+    var j = shuffle(jumbled);
+     button_count=0;
+    word_count=0;
+    var button ="";
+    var l_button = "";
+    for(i=0;i<=j.length-1;i++){
+      val = j[i];
+      button= "  <button id='btn"+i+"'onclick='finals(this.id,this.value)' value='"+val+"'>"+val+"</button>  ";
+      l_button+=button;
+            button_count++;
+    }
 		separate1 = hindi.split(' ');
 		for(initial = 0; initial < separate1.length; initial++)
 		{
@@ -207,4 +231,5 @@ function message(){
   }
   return jumble;
 }
+document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets()'>Re-form the sentence</button></center>"
 }
