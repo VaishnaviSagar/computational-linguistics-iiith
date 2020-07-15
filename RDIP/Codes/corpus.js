@@ -263,6 +263,20 @@ if (document.getElementById("language").value=='English'){
     }
     document.getElementById("output").innerHTML = answers;
   }
+  //hiding ans
+  function hides(){
+  document.getElementById('description10').innerHTML = "<center><button id='showansbtn' onclick='toggle()'>Get Correct Sentence</button></center>"
+  document.getElementById("output").innerHTML = "";
+}
+
+
+//toggle
+function toggle(){
+    while(document.getElementById("output").innerHTML ==""){
+  
+    document.getElementById('description10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
+  }
+}
 	function shuffle(jumbled){
   var jumble = jumbled.split(" ");
   var i = jumble.length, temp, randomi;
