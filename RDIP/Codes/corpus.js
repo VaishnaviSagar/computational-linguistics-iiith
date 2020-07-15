@@ -219,6 +219,50 @@ function message(){
 				document.getElementById("description1").innerHTML = ""; 
 		document.getElementById("description2").innerHTML = "";
 	}
+	var word_count;
+var button_count,r;
+var answers="";
+function compares(){
+
+        var str= finalsentence.trim();
+    for(let i=0;i<comarray.length;i++){
+        var str1 = comarray[i];
+         console.log(i, str1.localeCompare(str), str, str.length, str1, str1.length)
+        var n = str1.localeCompare(str);
+        if (n == 0) {
+            document.getElementById('demo8').innerHTML = "RIGHT";
+
+            return;
+        }
+    }
+      document.getElementById('demo9').innerHTML = "WRONG";
+
+    document.getElementById("demo10").innerHTML = "<center><button id='showansbtn' onclick='gets()'>Get Correct Sentence</button></center>"
+}
+
+	//functionality for correct answer
+	function gets(){
+
+    answers="";
+    document.getElementById("output").innerHTML = ""
+    var totalanswers = 0;
+
+if (document.getElementById("language").value=='English'){
+    totalanswers = array1[r].length-1;
+    document.getElementById('demo10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
+    for(i=0;i<=totalanswers;i++){
+      answers += "<center>"+array1[r][i]+"<br></center>"
+    }
+    document.getElementById("output").innerHTML = answers;
+  }
+    else if(document.getElementById("language").value=='Hindi'){
+    totalanswers = array2[r].length-1;
+    document.getElementById('demo10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
+    for(i=0;i<=totalanswers;i++){
+      answers += "<center>"+array2[r][i]+"<br></center>"
+    }
+    document.getElementById("output").innerHTML = answers;
+  }
 	function shuffle(jumbled){
   var jumble = jumbled.split(" ");
   var i = jumble.length, temp, randomi;
