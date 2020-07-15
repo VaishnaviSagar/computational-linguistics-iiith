@@ -233,3 +233,17 @@ function message(){
 }
 document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets( )'>Re-form the sentence </button> </center>"
 }
+ word_count++;
+       if(button_count==word_count){
+    document.getElementById("demo7").innerHTML = "<center><button id='correctness'  onclick='compares()'>Check the correctness</button></center>"
+    }
+    }
+
+function resets(){
+  
+  document.getElementById("demo5").innerHTML = "";
+    document.getElementById("demo6").innerHTML ="";
+  document.getElementById("demo4").innerHTML = "";
+    word_count=0;
+    }
+}
