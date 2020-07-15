@@ -231,5 +231,5 @@ function message(){
   }
   return jumble;
 }
-document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets()'>Re-form the sentence </button> </center>"
+document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets( )'>Re-form the sentence </button> </center>"
 }
