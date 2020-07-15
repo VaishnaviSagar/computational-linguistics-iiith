@@ -230,14 +230,14 @@ function compares(){
          console.log(i, str1.localeCompare(str), str, str.length, str1, str1.length)
         var n = str1.localeCompare(str);
         if (n == 0) {
-            document.getElementById('demo8').innerHTML = "RIGHT";
+            document.getElementById('description8').innerHTML = "RIGHT ANSWER";
 
             return;
         }
     }
-      document.getElementById('demo9').innerHTML = "WRONG";
+      document.getElementById('description9').innerHTML = "WRONG ANSWER";
 
-    document.getElementById("demo10").innerHTML = "<center><button id='showansbtn' onclick='gets()'>Get Correct Sentence</button></center>"
+    document.getElementById("description10").innerHTML = "<center><button id='showansbtn' onclick='gets()'>Get Correct Sentence</button></center>"
 }
 
 	//functionality for correct answer
@@ -249,7 +249,7 @@ function compares(){
 
 if (document.getElementById("language").value=='English'){
     totalanswers = array1[r].length-1;
-    document.getElementById('demo10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
+    document.getElementById('description10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
     for(i=0;i<=totalanswers;i++){
       answers += "<center>"+array1[r][i]+"<br></center>"
     }
@@ -257,7 +257,7 @@ if (document.getElementById("language").value=='English'){
   }
     else if(document.getElementById("language").value=='Hindi'){
     totalanswers = array2[r].length-1;
-    document.getElementById('demo10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
+    document.getElementById('description10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
     for(i=0;i<=totalanswers;i++){
       answers += "<center>"+array2[r][i]+"<br></center>"
     }
@@ -275,19 +275,19 @@ if (document.getElementById("language").value=='English'){
   }
   return jumble;
 }
-document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets( )'>Re-form the sentence </button> </center>"
+document.getElementById("description6").innerHTML = "<center><button id='reform' onclick='resets( )'>Re-form the sentence </button> </center>"
 }
  word_count++;
        if(button_count==word_count){
-    document.getElementById("demo7").innerHTML = "<center><button id='correctness'  onclick='compares()'>Check the correctness</button></center>"
+    document.getElementById("description7").innerHTML = "<center><button id='correctness'  onclick='compares()'>Check the correctness</button></center>"
     }
     }
 
 function resets(){
   
-  document.getElementById("demo5").innerHTML = "";
-    document.getElementById("demo6").innerHTML ="";
-  document.getElementById("demo4").innerHTML = "";
+  document.getElementById("description5").innerHTML = "";
+    document.getElementById("description6").innerHTML ="";
+  document.getElementById("description4").innerHTML = "";
     word_count=0;
     }
 }
