@@ -277,6 +277,7 @@ function toggle(){
     document.getElementById('description10').innerHTML = "<center><button id='showansbtn' onclick='hides()'>hide correct answer</button></center>"
   }
 }
+//shuffle of words
 	function shuffle(jumbled){
   var jumble = jumbled.split(" ");
   var i = jumble.length, temp, randomi;

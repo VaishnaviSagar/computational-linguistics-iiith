@@ -1,0 +1,88 @@
+#heading {
+	font-size: 30px;
+	margin-left: 20px;
+	color: grey;
+	font-weight: bold;
+}
+
+h2{
+	line-height: 0.1px;
+	color: #222222;
+    font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 340;
+    margin-left: 40px;
+    padding: 5px 0 30px;
+}
+
+.container-fluid {
+	margin-left: 60px;
+	margin-top: 60px;
+}
+
+#list {
+	text-align: width/2;
+	margin-left: 500px;
+	background-color: white;
+}
+
+#description {
+	font-size: 20px;
+	color: #AA00AA;
+	font-weight: lighten;
+	margin-left: 320px;
+	margin-top: 15px;
+	font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+}
+
+#description1 {
+	font-size: 20px;
+	color: #0037FF;
+	font-style: italic;
+	margin-left: 500px;
+	margin-top: 0px;
+	line-height: 18px;
+}
+
+#description2 {
+	font-size: 18px;
+	margin-left: 500px;
+	cursor: pointer;
+}
+
+button {
+	margin: 10px;
+	text-align: center;
+	display: inline-block;
+	font-size: 12px;
+	font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+}
+
+#description3 {
+	font-size: 18px;
+	line-height: 7px;
+	color: #0000AA;
+	font-weight: bold;
+	text-align: center;
+	font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+}
+
+#description4 {
+	font-size: 30px;
+	background: transparent;
+	padding: 0px;
+	font-weight: 500;
+	text-align: center;
+	font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+	line-height: 5px;
+}
+
+#resetText {
+	margin-left: 600px; 
+	display: inline-block;
+	width: 155px;
+	height: 18px;
+	font-size: 11px;
+	font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+	line-height: 3px;
+}
