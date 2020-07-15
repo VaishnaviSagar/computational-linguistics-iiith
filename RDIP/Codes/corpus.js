@@ -289,6 +289,14 @@ function toggle(){
   }
   return jumble;
 }
+let finalsentence ="";
+function finals(id,value){
+  
+  document.getElementById("description4").innerHTML = "Formed Sentence (after selecting words):";
+  finalsentence += value + " ";
+   document.getElementById("description5").innerHTML = finalsentence;
+  document.getElementById(id).style.display = "none";
+
 document.getElementById("description6").innerHTML = "<center><button id='reform' onclick='resets( )'>Re-form the sentence </button> </center>"
 }
  word_count++;
