@@ -1,0 +1,48 @@
+--Name of the Lab:Computational-Linguistics-Labs.
+--Name of the Experiment:Forming Sentences-2.
+
+The main functionality used in this experiment is buttons.
+In the Webpage basically 6 buttons available as:
+1.Introduction
+2.Theory
+3.Objective
+4.Experiment
+5.Quizzes
+6.Procedure
+which of each buttons are redirected to its each HTML files of own functionality.Such as...,
+(a)Indroduction.html
+(b)Theory.html
+(c)Objectve.html
+(d)Experiment.html
+(e)Quizzes.html
+(f)Procedure.html
+
+=>To understand the Experiment...;
+------Click on Experiment Button
+=>On loading  into experiment tab
+A Radio Button appears as "Select "
+which have dropdown options of Corpus1,Corpus2 and Corpus3.
+
+--If Corpus1 is selected:
+
+=>A paragraph/corpus appears below that it asks for token and types.
+To give inputs for token and type it has Number Box to enter the number/
+
+=>ON giving two inputs 
+------If the input Numbers are correct
+                       GREEN TEXT "Correct Answer!!!" is appeared.
+------Else
+                 RED TEXT "Wrong Answer!!!" is appeared. when either of Number Box inputs are incorrect.
+--If Corpus2 and Corpus 3 are selected..,
+Same functionalities follows as above for Corpus1. But corpus/paragraphs and token type changes.
+
+************Required Functionalities in Experiment:************************
+1.Arrangement of Tabs
+(a) Procedure tab before Experiment tab will be helpful.
+(b)Quizzes tab at last.
+2.Experiment Tab:
+It will be helpful if the mistake is shown when wrong answer happens.
+
+
+
+
