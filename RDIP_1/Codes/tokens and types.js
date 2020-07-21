@@ -7,22 +7,110 @@ corpus3=["A man had a little dog, and he was very fond of it. He would pat its h
 let selection = document.getElementById("choose");
 function showCorpus(){
 	if(selection.value ==='Corpus1'){
-document.getElementById("s1").innerHTML=corpus1;
-document.getElementById("s2").innerHTML="Enter the Number of Tokens And Types for the above Corpus:"
-document.getElementById("s3").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
-document.getElementById("s4").innerHTML="<input type='submit'>"
+document.getElementById("select").innerHTML=corpus1;
+document.getElementById("display").innerHTML="Enter the Number of Tokens And Types for the above Corpus:"
+document.getElementById("tab").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
+document.getElementById("answer").innerHTML=" ";
+document.getElementById("answer1").innerHTML=" ";
+document.getElementById("anser2").innerHTML=" ";
+document.getElementById("continue").innerHTML=" ";
+document.getElementById("corp1").innerHTML=corpus1;
+document.getElementById("correct").innerHTML="";
+document.getElementById("wrong").innerHTML="";
+document.getElementById("tab1").innerHTML="";
+document.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus1)'>Submit</button>"
+
+
 	}
 	if(selection.value ==='Corpus2'){
-document.getElementById("s1").innerHTML=corpus2;
-document.getElementById("s2").innerHTML="Enter the Number of Tokens and Types for the above Corpus:"
-document.getElementById("s3").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
-document.getElementById("s4").innerHTML="<input type='submit'>"
+document.getElementById("select").innerHTML=corpus2;
+document.getElementById("display").innerHTML="Enter the Number of Tokens and Types for the above Corpus:"
+document.getElementById("tab").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
+document.getElementById("answer").innerHTML="";
+document.getElementById("answer1").innerHTML="";
+document.getElementById("answer2").innerHTML="";
+document.getElementById("continue").innerHTML="";
+document.getElementById("correct").innerHTML="";
+document.getElementById("corp1").innerHTML=corpus2;
+document.getElementById("wrong").innerHTML="";
+document.getElementById("tab1").innerHTML="";
+document.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus2)'>Submit</button>"
+
+
 	}
 	if(selection.value ==='Corpus3'){	
-document.getElementById("s1").innerHTML=corpus3;
-document.getElementById("s2").innerHTML="Enter the Number of Tokens and Types for the above Corpus:"
-document.getElementById("s3").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
-document.getElementById("s4").innerHTML="<input type='submit'>"
+document.getElementById("select").innerHTML=corpus3;
+document.getElementById("display").innerHTML="Enter the Number of Tokens and Types for the above Corpus:"
+document.getElementById("tab").innerHTML="<table border='1' ><tr><td>#Tokens</td><td><input type ='number' id='token'></td></tr><tr><td>#Types</td><td><input type ='number' id='type'></td></tr></table>";
+document.getElementById("answer").innerHTML="<input type='submit'>"
+document.getElementById("answer1").innerHTML="";
+document.getElementById("answer2").innerHTML="";
+document.getElementById("continue").innerHTML="";
+document.getElementById("corp1").innerHTML=corpus3;
+document.getElementById("correct").innerHTML="";
+document.getElementById("wrong").innerHTML="";
+document.getElementById("tab1").innerHTML="";
+document.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus3)'>Submit</button>"
+
+}
+}
+
+function token_check()
+{
+	count=0
+	var p=document.getElementById("p1").innerHTML
+
+	res=p.split(" ")
+	const p1 = res.filter(res1=> res1.trim() !== '"');
+	
+	for(i=0;i<p1.length;i++)
+	{
+		count+=1;
+	}
+	return p1.length
+}
+function type_check()
+{
+	count1=0
+	var p=document.getElementById("p1").innerHTML.toLowerCase().replace(/[^\w\s]/gi, '')
+
+	res=p.split(" ")
+	const p1 = res.filter(res1=> res1.trim().length>0);
+
+y=removeDuplicates(p1)
+	function removeDuplicates(array) {
+x= (array.filter((value, index) => array.indexOf(value) ===index ).length);
+return x
+};
+function compare(corp){
+	document.getElementById('correct').innerHTML="";
+	document.getElementById('wrong').innerHTML="";
+	document.getElementById('answer1').innerHTML="";
+	document.getElementById('answer2').innerHTML="";
+	document.getElementById('continue').innerHTML="";
+	var token= document.getElementById('token').value;
+	var type1= document.getElementById('types').value;
+	var x=document.getElementById('token').innerHTML;
+	if(token== tokens(corp) && type1== types(corp)){
+		document.getElementById('answer1').innerHTML="Right answer!";
+		document.getElementById('token').style.backgroundColor="green";
+		document.getElementById('types').style.backgroundColor="green";
+		document.getElementById('continue').innerHTML="<button onclick='newTypes()'>Continue</button>";
+	}
+	if(token== tokens(corp) && type1!= types(corp)){
+		document.getElementById('answer2').innerHTML="Wrong answer!";
+		document.getElementById('token').style.backgroundColor="green";
+		document.getElementById('types').style.backgroundColor="red";
+	}
+	if(token!= tokens(corp) && type1== types(corp)){
+		document.getElementById('answer2').innerHTML="Wrong answer!";
+		document.getElementById('token').style.backgroundColor="red";
+		document.getElementById('types').style.backgroundColor="green";
+	}
+	if(token!= tokens(corp) && type1!= types(corp)){
+		document.getElementById('answer2').innerHTML="Wrong answer!";
+		document.getElementById('token').style.backgroundColor="red";
+		document.getElementById('types').style.backgroundColor="red";
 	}
 }
 
