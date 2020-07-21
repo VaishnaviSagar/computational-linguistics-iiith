@@ -13,7 +13,7 @@ document.getElementById("tab").innerHTML="<table border='1' ><tr><td>#Tokens</td
 document.getElementById("answer").innerHTML=" ";
 document.getElementById("answer1").innerHTML=" ";
 document.getElementById("anser2").innerHTML=" ";
-document.getElementById("continue").innerHTML=" ";
+document.getElementById("continue").innerHTML="";
 document.getElementById("corp1").innerHTML=corpus1;
 document.getElementById("correct").innerHTML="";
 document.getElementById("wrong").innerHTML="";
