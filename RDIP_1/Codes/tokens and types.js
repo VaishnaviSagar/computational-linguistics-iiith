@@ -142,5 +142,18 @@ if(x=='Corpus3'){
 function uniqueWords(value, index, self) { 
     return self.indexOf(value) === index;
 }
+function compare1(str){
+	document.getElementById('correct').innerHTML="";
+	document.getElementById('wrong').innerHTML="";
+	var newType= document.getElementById('newtype').value;
+	if(newType == newSubmit(str)){
+		document.getElementById('correct').innerHTML="Right answer!";
+		document.getElementById('newtype').style.backgroundColor="green"
+	}
+	else{
+	document.getElementById('wrong').innerHTML="Wrong answer!";
+	document.getElementById('newtype').style.backgroundColor="red";
+	}
+}
 
 
