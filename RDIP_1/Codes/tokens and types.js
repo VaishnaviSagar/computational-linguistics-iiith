@@ -119,7 +119,7 @@ function compare(corp){
 	}
 }
 function newTypes(){
-	document.getElementById('answer').innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types";
+	document.getElementById('answer').innerHTML="Now, consider all the tokens with the same 'roots' word to be of the same type. Recalculating the number of types";
 	document.getElementById("submitBtn").innerHTML="";
 	document.getElementById('answer1').innerHTML="";
 	document.getElementById('answer2').innerHTML="";
@@ -127,7 +127,7 @@ function newTypes(){
 	document.getElementById('wrong').innerHTML="";
 	document.getElementById('continue').innerHTML="#New types:";
 	document.getElementById('tab1').innerHTML="<input id='newtype' type=text>";
-}	
+	
 	var x=document.getElementById("selected").value;
 	if(x=='Corpus1'){
 	document.getElementById("submitBtn1").innerHTML="<button onclick='compare1(corpus1)'>Submit</button>"
@@ -138,6 +138,67 @@ if(x=='Corpus2'){
 if(x=='Corpus3'){
 	document.getElementById("submitBtn1").innerHTML="<button onclick='compare1(corpus3)'>Submit</button>"
 }
+}
+function newSubmit(str){
+    str=str.replace(/[^a-zA-Z ]/g, "");
+    str= str.toLowerCase();
+	str = str.split(" ");
+	var s=[];
+	for(var i=0; i<str.length;i++){
+		if(str[i]=='not'){
+			str[i]='no';
+		}
+		if(str[i]=='grew' || str[i]=='grown'){
+			str[i]='grow';
+		}
+		if(str[i]=='ate'){
+			str[i]='eat';
+		}
+		if(str[i]=='found'){
+			str[i]='find';
+		}
+		if(str[i]=='had'){
+			str[i]='have';
+		}
+		if(str[i]=='said'){
+			str[i]='say';
+		}
+		if(str[i]=='would'){
+			str[i]='will';
+		}
+		if(str[i]=='heard'){
+			str[i]='hear';
+		}
+		if(str[i]=='played'){
+			str[i]='play';
+		}
+		if(str[i]=='me'){
+			str[i]='i';
+		}
+		if(str[i]=='it' || str[i]=='himself' || str[i]=='his' || str[i]=='him'){
+			str[i]='he';
+		}
+		if(str[i]=='does' || str[i]=='did' || str[i]=='done'){
+			str[i]='do';
+		}
+		if(str[i]=='ran'){
+			str[i]='run';
+		}
+		if(str[i]=='was' || str[i]=='are'){
+			str[i]='is';
+		}
+		if(str[i]=='this'){
+			str[i]='that';
+		}
+	}	
+}		
+        stemmer.setCurrent(str[i]);     
+		stemmer.stem();
+		s.push(stemmer.getCurrent());
+		var unique = s.filter(uniqueWords);
+	console.log(unique);
+	return unique.length;
+	}
 
 function uniqueWords(value, index, self) { 
     return self.indexOf(value) === index;
