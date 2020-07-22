@@ -118,5 +118,29 @@ function compare(corp){
 		document.getElementById('types').style.backgroundColor="red";
 	}
 }
+function newTypes(){
+	document.getElementById('answer').innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types";
+	document.getElementById("submitBtn").innerHTML="";
+	document.getElementById('answer1').innerHTML="";
+	document.getElementById('answer2').innerHTML="";
+	document.getElementById('correct').innerHTML="";
+	document.getElementById('wrong').innerHTML="";
+	document.getElementById('continue').innerHTML="#New types:";
+	document.getElementById('tab1').innerHTML="<input id='newtype' type=text>";
+}	
+	var x=document.getElementById("selected").value;
+	if(x=='Corpus1'){
+	document.getElementById("submitBtn1").innerHTML="<button onclick='compare1(corpus1)'>Submit</button>"
+}
+if(x=='Corpus2'){
+	document.getElementById("submitBtn1").innerHTML="<button onclick='compare1(corpus2)'>Submit</button>"
+}
+if(x=='Corpus3'){
+	document.getElementById("submitBtn1").innerHTML="<button onclick='compare1(corpus3)'>Submit</button>"
+}
+
+function uniqueWords(value, index, self) { 
+    return self.indexOf(value) === index;
+}
 
 
