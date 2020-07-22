@@ -1,0 +1,42 @@
+--Name of the Lab:Computational-Linguistics-Labs.
+--Name of the Experiment:Coarse-grained POS TAgging
+
+The main functionality used in this experiment is buttons.
+In the Webpage basically 7 buttons available as:
+1.Introduction
+2.Theory
+3.Objective
+4.Experiment
+5.Quizzes
+6.Procedure
+7.Further Reading
+which of each buttons are redirected to its each HTML files of own functionality.Such as...,
+(a)Indroduction.html
+(b)Theory.html
+(c)Objectve.html
+(d)Experiment.html
+(e)Quizzes.html
+(f)Procedure.html
+(g)Further Reading
+
+=>To understand the Experiment...;
+------Click on Experiment Button
+=>On loading  into experiment tab
+A Radio Button appears as "Select Language"
+which have dropdown options as English and Hindi
+
+--If English is selected:
+>>>>>Another Radio Button appears as "Select a sentence"
+which have dropdown options as   Sentences.
+
+---If any sentence is selected 
+                    A table appears as select the POS tag for corresponding words.
+                           1)Lexicon: which devide part of sentence.
+                           2)POS: Parts Of Speech for those words 
+If POS are identified it shows tick mark in green else cross mark in red
+Same applicable for Hindi.
+
+************Required Functionalities in Experiment:************************
+1.Arrangement of Tabs
+(a) Procedure tab before Experiment tab will be helpful.
+(b)Quizzes tab at last.
